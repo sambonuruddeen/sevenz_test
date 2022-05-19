@@ -6,7 +6,11 @@ Authentication with laravel Sanctum
 - Start laravel server with `php artisan serve`
 - Open the link with your browser
 
-#Actions
-The API's were tested with *Postman*
-1 `localhost:8000/api/register`
-1 # sevenz_test
+# Actions
+All API's were tested with *Postman*
+- Go to register route to create new user (e.g `localhost:8000/api/register`)
+    - Under Params in postman, create name, email, and password then run a *POST* request
+    - Copy the Access Token displayed
+- Run a Get request to the endpoint `patient` (e.g localhost:8000/api/patient) to get all types of Test
+- Run a Post request to `patient` endpoint to submit patient data 
+

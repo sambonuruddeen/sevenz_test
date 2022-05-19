@@ -49,11 +49,11 @@ $user = User::where('email', $request['email'])->firstOrFail();
 
 $token = $user->createToken('auth_token')->plainTextToken;
 
-foreach ($user->tokens as $token) {
-    //
-    echo $token;
-}
 
+return response()->json([
+           'access_token' => $token,
+           'token_type' => 'Bearer',
+]);
 }
 
 public function logout(Request $request)
